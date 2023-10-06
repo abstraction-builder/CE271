@@ -98,7 +98,7 @@ void show_twocomp()
 /* $end show-twocomp */
 }
 
-int main(void)
+int name(int argc, char *argv[])
 {
     int val = 15213;
 
@@ -122,5 +122,6 @@ int main(void)
         printf("Calling string_leg\n");
         string_leg();
     }
-    return 15213;
+
+    return 0;
 }
