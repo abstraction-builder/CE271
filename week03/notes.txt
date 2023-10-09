@@ -21,4 +21,5 @@ Commands to discuss:
 * Manipulating files and directories:
 	** Commands: cp mv mkdir rm ln
 	** Discuss wild cards: Like copping every .c file to a particular directory
- 	** 
+ 
+*** https://www.hostinger.com/tutorials/linux-commands link to Linux commands. Great for a referenc
