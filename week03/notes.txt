@@ -4,4 +4,21 @@
 
 
 Commands to discuss:
-* 
+* Navigation
+	** pwd cd ls
+	** Discuss absolute path vs relative path
+	** Parent directory and current dir (. and ..)
+	** Hidden files begins with . Use ls -a to list them. Don't mess up these files
+
+* Exploring the system
+	** ls file less more 
+	** Discuss command arguments
+
+* Example: Let's cd into some(interesting) directory, list the directory contents with -l flag. Then, if you see some interesting file determine its contents with file command and maybe try printing out it with less.
+
+* Visit page 54 and read organization of file system!
+
+* Manipulating files and directories:
+	** Commands: cp mv mkdir rm ln
+	** Discuss wild cards: Like copping every .c file to a particular directory
+ 	** 
