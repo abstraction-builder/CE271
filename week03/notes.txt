@@ -1,0 +1,7 @@
+* GUI vs CLI?
+* We just need to be productive with our virtual machines!
+* Today's topics: basics commands, structure of the commands, file system navigation, command line editing and finding help
+
+
+Commands to discuss:
+* 
