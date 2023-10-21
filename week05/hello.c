@@ -1,4 +1,8 @@
-int add(int u, int v)
+#include <stdio.h>
+
+int main(void)
 {
-	return u + v;
+	puts("hello world");
+
+	return 0;
 }
