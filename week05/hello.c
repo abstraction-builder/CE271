@@ -1,10 +1,8 @@
-// #include <stdio.h>
+#include <stdio.h>
 
-// #define FOO 5
-
-int foo(void)
+int main(void)
 {
-	//puts("hello world");
+	puts("hello world");
 
-	return 0 + 15;
+	return 0;
 }

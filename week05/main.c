@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include "sum.h"
 
-// void multstore(long, long, long*);
+void multstore(long, long, long*);
 
 int main(void)
 {
