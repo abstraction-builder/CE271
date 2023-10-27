@@ -47,15 +47,11 @@ Disassembly of section .note.gnu.build-id:
   40027e:	00 00                	add    %al,(%rax)
   400280:	47                   	rex.RXB
   400281:	4e 55                	rex.WRX push %rbp
-  400283:	00 1a                	add    %bl,(%rdx)
-  400285:	03 77 24             	add    0x24(%rdi),%esi
-  400288:	99                   	cltd   
-  400289:	d8 08                	fmuls  (%rax)
-  40028b:	58                   	pop    %rax
-  40028c:	9b                   	fwait
-  40028d:	84 35 89 24 fe dc    	test   %dh,-0x2301db77(%rip)        # ffffffffdd3e271c <__TMC_END__+0xffffffffdcde16f4>
-  400293:	22 79 aa             	and    -0x56(%rcx),%bh
-  400296:	3a 21                	cmp    (%rcx),%ah
+  400283:	00 bc 2c 65 19 1c e0 	add    %bh,-0x1fe3e69b(%rsp,%rbp,1)
+  40028a:	28 ab dd 0d f0 4f    	sub    %ch,0x4ff00ddd(%rbx)
+  400290:	6c                   	insb   (%dx),%es:(%rdi)
+  400291:	d3 ea                	shr    %cl,%edx
+  400293:	3d 94 7f fa 3a       	cmp    $0x3afa7f94,%eax
 
 Disassembly of section .gnu.hash:
 
