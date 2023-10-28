@@ -1,52 +1,28 @@
-	.section	__TEXT,__text,regular,pure_instructions
-	.build_version macos, 14, 0	sdk_version 14, 0
-	.globl	_mult2                          ; -- Begin function mult2
-	.p2align	2
-_mult2:                                 ; @mult2
-	.cfi_startproc
-; %bb.0:
-	mul	x0, x1, x0
+mult2:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-8(%rbp), %rax
+	imulq	-16(%rbp), %rax
+	popq	%rbp
 	ret
-	.cfi_endproc
-                                        ; -- End function
-	.globl	_multstore                      ; -- Begin function multstore
-	.p2align	2
-_multstore:                             ; @multstore
-	.cfi_startproc
-; %bb.0:
-	mul	x8, x1, x0
-	str	x8, [x2]
+multstore:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$40, %rsp
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	%rdx, -40(%rbp)
+	movq	-32(%rbp), %rdx
+	movq	-24(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	mult2
+	movq	%rax, -8(%rbp)
+	movq	-40(%rbp), %rax
+	movq	-8(%rbp), %rdx
+	movq	%rdx, (%rax)
+	nop
+	leave
 	ret
-	.cfi_endproc
-                                        ; -- End function
-	.globl	_main                           ; -- Begin function main
-	.p2align	2
-_main:                                  ; @main
-	.cfi_startproc
-; %bb.0:
-	sub	sp, sp, #32
-	.cfi_def_cfa_offset 32
-	stp	x29, x30, [sp, #16]             ; 16-byte Folded Spill
-	add	x29, sp, #16
-	.cfi_def_cfa w29, 16
-	.cfi_offset w30, -8
-	.cfi_offset w29, -16
-	mov	w8, #3195
-	str	x8, [sp]
-Lloh0:
-	adrp	x0, l_.str@PAGE
-Lloh1:
-	add	x0, x0, l_.str@PAGEOFF
-	bl	_printf
-	mov	w0, #0
-	ldp	x29, x30, [sp, #16]             ; 16-byte Folded Reload
-	add	sp, sp, #32
-	ret
-	.loh AdrpAdd	Lloh0, Lloh1
-	.cfi_endproc
-                                        ; -- End function
-	.section	__TEXT,__cstring,cstring_literals
-l_.str:                                 ; @.str
-	.asciz	"x * y = %ld\n"
-
-.subsections_via_symbols
