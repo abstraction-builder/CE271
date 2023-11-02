@@ -1025,12 +1025,6 @@ int Open_listenfd(char *port)
     int rc;
 
     if ((rc = open_listenfd(port)) < 0)
-	unix_error("Open_listenfd error");
+        unix_error("Open_listenfd error");
     return rc;
 }
-
-/* $end csapp.c */
-
-
-
-
